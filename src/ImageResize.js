@@ -24,10 +24,6 @@ export default class ImageResize {
             moduleClasses = options.modules.slice();
         }
 
-		if (options.parchment) {
-			this.parchment = options.parchment;
-		}
-
         // Apply options to default options
         this.options = defaultsDeep({}, options, DefaultOptions);
 
@@ -59,7 +55,7 @@ export default class ImageResize {
 
         this.modules.forEach(
             (module) => {
-				module.onCreate(this.parchment);
+				module.onCreate();
             },
         );
 
@@ -117,7 +113,7 @@ export default class ImageResize {
             this.hideOverlay();
         }
 
-        this.quill.setSelection(null);
+        //this.quill.setSelection(null);
 
         // prevent spurious text selection
         this.setUserSelect('none');

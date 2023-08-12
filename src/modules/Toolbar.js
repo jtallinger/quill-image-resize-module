@@ -3,15 +3,18 @@ import IconAlignCenter from 'quill/assets/icons/align-center.svg';
 import IconAlignRight from 'quill/assets/icons/align-right.svg';
 import { BaseModule } from './BaseModule';
 
-let Parchment = {};
+import VQuill from 'quill';
+const Quill = window.Quill || VQuill;
+
+const Parchment = Quill.imports.parchment;
+
 let FloatStyle = {};
 let MarginStyle = {};
 let DisplayStyle = {};
 
 export class Toolbar extends BaseModule {
-	onCreate = (parchment) => {
+	onCreate = () => {
 		// Initilize styles
-		Parchment = parchment;
 		FloatStyle = new Parchment.Attributor.Style('float', 'float');
 		MarginStyle = new Parchment.Attributor.Style('margin', 'margin');
 		DisplayStyle = new Parchment.Attributor.Style('display', 'display');
