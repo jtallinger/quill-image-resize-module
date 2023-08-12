@@ -24,7 +24,7 @@ const quill = new Quill(editor, {
     modules: {
         // ...
         imageResize: {
-            // See optional "config" below
+			parchment: Quill.import('parchment')
         }
     }
 });
@@ -52,13 +52,15 @@ var quill = new Quill(editor, {
 
 ### Config
 
-For the default experience, pass an empty object, like so:
+For the default experience, pass an object with parchment, like so:
 ```javascript
 var quill = new Quill(editor, {
     // ...
     modules: {
         // ...
-        ImageResize: {}
+		ImageResize: {
+			parchment: Quill.import('parchment')
+		}
     }
 });
 ```
