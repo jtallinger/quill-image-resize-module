@@ -5,7 +5,7 @@
   "main": "image-resize.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "webpack -p --progress --colors",
+    "release": "webpack",
     "dev": "webpack --progress --colors --watch",
     "lint": "eslint --ext js,es6 src",
     "fixlint": "eslint --fix --ext js,es6 src"
@@ -34,18 +34,18 @@
   },
   "homepage": "https://github.com/jtallinger/quill-image-resize-module#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
     "@babel/eslint-parser": "^7.22.10",
     "babel-loader": "^9.1.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-es2015": "^6.24.1",
+    "@babel/preset-env": "^7.16.10",
     "eslint": "^8.47.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.28.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.1",
-    "webpack": "^5.88.2"
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
     "lodash": "^4.17.21",
